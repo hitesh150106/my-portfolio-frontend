@@ -25,6 +25,7 @@ const Hero = () => {
             Idea to Real World Porduct.
           </p>
         </div>
+        
       </div>
 
       <ComputersCanvas />
