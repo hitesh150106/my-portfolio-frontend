@@ -203,3 +203,10 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+.ai-style-change-1 { /* or the most specific selector for Introduction */
+    margin-bottom: 0 !important; /* Use !important only if necessary to override framework styles */
+}
+.ai-style-change-8 { /* or the most specific selector for Overview */
+    margin-top: 0 !important;
+}

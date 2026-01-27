@@ -17,17 +17,11 @@ const ServiceCard = ({ index, title, icon }) => {
       <motion.div
         variants={fadeIn("right", "spring", 0.3 * index, 0.75)}
         whileHover={{ scale: 1.05 }}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-      >
+        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
+          
         <div className="bg-tertiary rounded-[20px] py-8 px-6 min-h-[280px] flex flex-col items-center justify-evenly">
-          <img
-            src={icon}
-            alt={title}
-            className="w-16 h-16 object-contain"
-          />
-          <h3 className="text-white text-[18px] font-bold text-center">
-            {title}
-          </h3>
+          <img src={icon} alt={title} className="w-16 h-16 object-contain"/>
+          <h3 className="text-white text-[18px] font-bold text-center">{title}</h3>
         </div>
       </motion.div>
     </Tilt>
@@ -37,89 +31,28 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()} className="px-6 sm:px-10">
-        <p className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
-          Introduction
-        </p>
-        <p className={styles.heroHeadText}>Overview</p>
+
+      <motion.div variants={textVariant()} className="mb-8 sm:mb-12 w-full">
+        <p className={`${styles.sectionSubText} absolute left-40 top-7 `}>Introduction</p>
+        <h2 className={`${styles.sectionHeadText} absolute left-40 top-10 `}>Overview.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 px-6 sm:px-10 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className=" absolute left-40 my-3 sm:mb-16 text-secondary text-[14px] sm:text-[16px] max-w-2xl leading-[26px] sm:leading-[30px]"
       >
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis alias
-        quia, architecto necessitatibus assumenda molestiae, consectetur voluptate
-        libero iure corporis velit, animi ipsam aliquam eaque optio beatae
-        aspernatur laborum explicabo?
+        I'm a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks like React, Node.js, and Three.js. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
 
-      {/* 🔥 RESPONSIVE GRID */}
-      <div className="mt-20 px-6 sm:px-10 grid grid-cols-1 sm:grid-cols-2 gap-10 place-items-center">
+      <div className="w-[74%] relative top-50 left-42 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-6 auto-rows-max justify-items-start">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
+
+
     </>
   );
 };
 
 export default SectionWrapper(About, "about");
-
-
-// const ServiceCard = ({index , title , icon}) => {
-//     const tiltOptions = {
-//     max: 45,
-//     scale: 1,
-//     speed: 450,
-//   };
-
-//   return(
-//     <Tilt 
-//     options = {tiltOptions}
-//     className="w-[250px] flex justify-center items-center">
-//       <motion.div variants={fadeIn("right" , "spring" , 0.5 * index , 0.75)}
-//         className="w-[250px] green-pink-gradient p-[1px] rounded-[20px] shadow-card hover:shadow-card-hover"
-//         whileInView={{ opacity: [0, 1] }}  // ✅ Trigger animation
-//         transition={{ duration: 0.5 }}
-//         whileHover={{ scale: 1.05 }}
-//         >
-//         <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
-//           <img src={icon} alt={title} className="w-16 h-16 object-contain"/>
-//           <h3 className='text-white text-[20px] font-bold text-center'>
-//             {title}
-//           </h3>
-//         </div>
-//       </motion.div>
-//     </Tilt>
-//     )
-// }
-
-// const About = () => {
-//   return (
-//     <>
-//     <motion.div variants={textVariant()}>
-//       <p className="pl-10 text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Introduction</p>
-//       <p className={styles.heroHeadText}>Overview</p>
-//     </motion.div>
-
-//     <motion.p variants={fadeIn("", "", 0.1, 1)}
-//     className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-//     >
-//       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis alias quia, architecto necessitatibus assumenda molestiae, consectetur voluptate libero iure corporis velit, animi ipsam aliquam eaque optio beatae aspernatur laborum explicabo?
-//       Debitis nisi velit repudiandae illo repellendus nihil soluta ipsa maxime, blanditiis voluptatem exercitationem delectus, molestiae consequatur quas, laboriosam mollitia sint ullam voluptas sequi sapiente dolorum a esse animi quae! Odit!
-//       Ut ducimus eaque accusamus ipsum dolorum nulla error similique expedita repellendus.
-
-//     </motion.p>
-
-//     <div className="mt-20 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10 place-items-center">
-//       {services.map((service, index) => (
-//         <ServiceCard key={service.title} index={index} {...service} />
-//       ))}
-//     </div>
-//     </>
-//   )
-// }
-
-// export default SectionWrapper(About , "about");
-

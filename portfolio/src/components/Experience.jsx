@@ -1,8 +1,11 @@
 import React from 'react'
+import { motion } from "framer-motion";
 
 const Experience = () => {
   return (
-    <div></div>
+     <motion.div>
+      hello my experience
+     </motion.div>
   )
 }
 
