@@ -11,11 +11,11 @@ const SectionWrapper = (Component, idName) => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.25 }}
-                className="relative top-25 h-screen w-full bg-[#050816]"
+                className="relative top-25 h-[95rem] sm:h-screen w-full bg-[#050816]"
             >
                 <span className="hash-span" id={idName}>&nbsp;</span>
 
-                <div className="w-full">
+                <div className="w-full h-screen">
                     <Component />
                 </div>
             </motion.section>

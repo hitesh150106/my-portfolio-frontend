@@ -32,25 +32,26 @@ const About = () => {
   return (
     <>
 
+    {/* ""ABB MOBILE , MEANS SMALL SCREEN KI UI KO IMPROVE KRNA HAI"" */}
+
+
       <motion.div variants={textVariant()} className="mb-8 sm:mb-12 w-full">
-        <p className={`${styles.sectionSubText} absolute left-40 top-7 `}>Introduction</p>
-        <h2 className={`${styles.sectionHeadText} absolute left-40 top-10 `}>Overview.</h2>
+        <p className={`${styles.sectionSubText} absolute left-10 top-10 sm:left-10 sm:top-4 md:left-40 md:top-5 `}>Introduction</p>
+        <h2 className={`${styles.sectionHeadText} absolute left-10 top-14 sm:left-10 sm:top-8 md:left-40 md:top-6 `}>Overview.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className=" absolute left-40 my-3 sm:mb-16 text-secondary text-[14px] sm:text-[16px] max-w-2xl leading-[26px] sm:leading-[30px]"
+        className=" absolute left-10 top-25 md:top-28 md:left-40 my-3 sm:mb-16 text-secondary text-[14px] sm:text-[16px] max-w-2xl leading-[26px] sm:leading-[30px]"
       >
         I'm a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks like React, Node.js, and Three.js. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
 
-      <div className="w-[74%] relative top-50 left-42 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-6 auto-rows-max justify-items-start">
+      <div className="w-[80%] top-45 left-16 md:w-[74%] relative md:top-50 md:left-42 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-6 auto-rows-max justify-items-start">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-
-
     </>
   );
 };
