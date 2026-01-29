@@ -31,26 +31,37 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <>
-
-      <motion.div variants={textVariant()} className="mb-8 sm:mb-12 w-full">
-        <p className={`${styles.sectionSubText} text-gray-400 absolute left-10 top-14 sm:left-10 sm:top-4 md:left-40 md:top-20 `}>Introduction</p>
-        <h2 className={`${styles.sectionHeadText} absolute left-10 top-18 sm:left-10 sm:top-8 md:left-40 md:top-26 `}>Overview.</h2>
+      <motion.div
+        variants={textVariant()}
+        className=""
+      >
+        <p className={`${styles.sectionSubText} text-gray-400 absolute left-10 top-14 sm:left-10 sm:top-4 md:left-40 md:top-10`}>
+          Introduction
+        </p>
+        <h2 className={`${styles.sectionHeadText} absolute left-10 top-18 sm:left-10 sm:top-8 md:left-40 md:top-16 `}>
+          Overview.
+        </h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className=" absolute left-10 top-29 md:top-50 md:left-40 my-3 sm:mb-16 text-secondary text-gray-400 text-[14px] sm:text-[16px] max-w-2xl leading-[26px] sm:leading-[30px]"
+        className=" absolute left-10 top-29 md:top-40 md:left-40 my-3 sm:mb-16 text-secondary text-gray-400 text-[14px] sm:text-[16px] max-w-2xl leading-[26px] sm:leading-[30px]"
       >
         I'm a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks like React, Node.js, and Three.js. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
 
-      <div className="w-[80%] top-45 left-18 md:w-[74%] relative md:top-70 md:left-42 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-6 auto-rows-max justify-items-start">
+      <div className="relative w-[80%] top-84 left-1/2 -translate-x-1/2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+          <ServiceCard
+            key={service.title}
+            index={index}
+            {...service}
+          />
         ))}
       </div>
     </>
   );
 };
+
 
 export default SectionWrapper(About, "about");

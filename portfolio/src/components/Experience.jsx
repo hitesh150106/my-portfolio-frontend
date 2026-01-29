@@ -42,22 +42,29 @@ const ExperienceCard = ({experience}) => {
 
 const Experience = () => {
   return (
-    <> 
-      <motion.div variants={textVariant()} className="relative w-full">
-        <p className={`${styles.sectionSubText} absolute -top-15 left-1/2 -translate-x-1/2 text-center `}>WHAT I HAVE DONE SO FAR</p>
-        <h2 className={`${styles.sectionHeadText} absolute -top-10 left-1/2 -translate-x-1/2 text-center`}>Work Experience</h2>
+    <>
+      <motion.div
+        variants={textVariant()}
+        className="w-full flex flex-col items-center text-center mb-16"
+      >
+        <p className={styles.sectionSubText}>
+          WHAT I HAVE DONE SO FAR
+        </p>
+        <h2 className={styles.sectionHeadText}>
+          Work Experience
+        </h2>
       </motion.div>
 
-      <div className="relative top-30 flex flex-col">
+      <div className="relative top-20 flex flex-col">
         <VerticalTimeline>
-          {experiences.map((experience , index) => (
-            <ExperienceCard key={index} experience={experience}/>
+          {experiences.map((experience, index) => (
+            <ExperienceCard key={index} experience={experience} />
           ))}
         </VerticalTimeline>
       </div>
+    </>
+  );
+};
 
-    </>  
-  )
-}
 
 export default SectionWrapper(Experience , 'work')
