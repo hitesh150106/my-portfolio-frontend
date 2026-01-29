@@ -10,13 +10,13 @@ const Computers = ({ isMobile }) => {
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor='black' />
-      <pointLight intensity={1}/>
+      <pointLight intensity={isMobile ? 0 : 2} />
             {/* FIXED SpotLight */}
       <spotLight
         position={isMobile ? [-1.5, 2, 1] : [-3, 5, 1]}  // Closer position
         angle={0.9}                                        // Wider angle
         penumbra={1}
-        intensity={2}                                    // Much brighter
+        intensity={8}                                    // Much brighter
         castShadow
         shadow-mapSize={[1024, 1024]}                      // Array format
         shadow-bias={-0.0001}                              // Fix shadow acne
@@ -27,7 +27,7 @@ const Computers = ({ isMobile }) => {
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.3 : 0.75}
-        position={isMobile ? [0, -2, -0.6] : [0, -2.6, -1.5]}
+        position={isMobile ? [0, -0.6, -0.6] : [0, -2.6, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
