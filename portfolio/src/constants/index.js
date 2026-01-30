@@ -46,15 +46,15 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Exploring Arudino & IOT",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Full-Stack Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "DSA C++",
     icon: creator,
   },
 ];
@@ -116,55 +116,55 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "Backend-Focused Full Stack Developer",
+    company_name: "Personal Projects",
+    icon: meta, // you can keep icons or create custom ones
+    iconBg: "#1F1F2E",
+    date: "2026(Jan) - Present",
+    points: [
+      "Building full-stack web applications using React, Node.js, Express, and MongoDB.",
+      "Designing REST APIs, handling authentication, authorization, and database schema design.",
+      "Connecting frontend and backend, managing API state, and fixing real-world bugs.",
+      "Deploying applications and improving performance, security, and scalability."
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company_name: "Portfolio & UI Projects",
+    icon: shopify,
+    iconBg: "#2B2F4A",
+    date: "2025(June) - Present",
+    points: [
+      "Developed responsive user interfaces using React, Tailwind CSS, and modern CSS practices.",
+      "Implemented animations using Framer Motion and interactive 3D components with Three.js.",
+      "Focused on clean UI, reusable components, and mobile-first design.",
+      "Improved UI consistency and accessibility across devices."
+    ],
+  },
+  {
+    title: "Backend Developer (Learning & Practice)",
+    company_name: "Self Learning",
+    icon: tesla,
+    iconBg: "#3A3F6B",
+    date: "2025(August) - Present",
+    points: [
+      "Practicing backend development with Node.js, Express, and MongoDB.",
+      "Working with JWT-based authentication, cookies, sessions, and role-based access control.",
+      "Handling real-world backend issues like token expiry, cookies, and API security.",
+      "Learning system design basics and scalable backend architecture."
+    ],
+  },
+  {
+    title: "DSA Learner (C++)",
+    company_name: "Problem Solving",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "2026 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Learning Data Structures and Algorithms using C++.",
+      "Practicing arrays, strings, recursion, linked lists, stacks, and queues.",
+      "Improving logical thinking and problem-solving skills through regular practice.",
+      "Building a strong foundation for interviews and competitive programming."
     ],
   },
 ];

@@ -30,27 +30,28 @@ const ServiceCard = ({ index, title, icon }) => {
 
 const About = () => {
   return (
-    <>
-      <motion.div
-        variants={textVariant()}
-        className=""
-      >
-        <p className={`${styles.sectionSubText} text-gray-400 absolute left-10 top-14 sm:left-10 sm:top-4 md:left-40 md:top-10`}>
+    <div className="flex flex-col gap-8">
+      {/* Heading */}
+      <motion.div variants={textVariant()}>
+        <p className={`${styles.sectionSubText} relative text-gray-400 left-6  sm:left-10  md:left-40 `}>
           Introduction
         </p>
-        <h2 className={`${styles.sectionHeadText} absolute left-10 top-18 sm:left-10 sm:top-8 md:left-40 md:top-16 `}>
+        <h2 className={`${styles.sectionHeadText} relative left-6 sm:left-10 md:left-38`}>
           Overview.
         </h2>
       </motion.div>
 
+      {/* Paragraph */}
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className=" absolute left-10 top-29 md:top-40 md:left-40 my-3 sm:mb-16 text-secondary text-gray-400 text-[14px] sm:text-[16px] max-w-2xl leading-[26px] sm:leading-[30px]"
+        className="relative left-6 md:left-40 my-3 sm:mb-16 text-gray-400 text-[14px] sm:text-[16px] max-w-2xl leading-[26px] sm:leading-[30px]"
       >
-        I'm a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks like React, Node.js, and Three.js. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!
+        I’m a backend-focused Full-Stack Developer skilled in JavaScript, React, Node.js, Express, MongoDB, and Three.js. I enjoy building scalable backend systems while maintaining clean and responsive frontends.
+        Currently, I’m learning DSA in C++ to sharpen my problem-solving skills and exploring AI and IoT to create impactful, real-world applications.
       </motion.p>
 
-      <div className="relative w-[80%] top-84 left-1/2 -translate-x-1/2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Services */}
+      <div className="relative w-[80%] left-1/2 -translate-x-1/2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((service, index) => (
           <ServiceCard
             key={service.title}
@@ -59,9 +60,8 @@ const About = () => {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 };
-
 
 export default SectionWrapper(About, "about");
