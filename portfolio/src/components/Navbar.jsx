@@ -36,7 +36,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg">
+        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#915EFF] rounded-xl flex items-center justify-center shadow-lg">
           <span className="text-white text-xl sm:text-2xl font-bold">H</span>
         </div>
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>

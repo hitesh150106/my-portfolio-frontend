@@ -15,13 +15,6 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
   sih,
   barbq,
@@ -76,10 +69,10 @@ const technologies = [
     name: "JavaScript",
     icon: javascript,
   },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
+  // {
+  //   name: "TypeScript",
+  //   icon: typescript,
+  // },
   {
     name: "React JS",
     icon: reactjs,
@@ -112,17 +105,16 @@ const technologies = [
     name: "figma",
     icon: figma,
   },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  // {
+  //   name: "docker",
+  //   icon: docker,
+  // },
 ];
 
 const experiences = [
   {
     title: "Backend-Focused Full Stack Developer",
     company_name: "Personal Projects",
-    icon: meta, // you can keep icons or create custom ones
     iconBg: "#1F1F2E",
     date: "2026(Jan) - Present",
     points: [
@@ -135,7 +127,6 @@ const experiences = [
   {
     title: "Frontend Developer",
     company_name: "Portfolio & UI Projects",
-    icon: shopify,
     iconBg: "#2B2F4A",
     date: "2025(June) - Present",
     points: [
@@ -148,7 +139,6 @@ const experiences = [
   {
     title: "Backend Developer (Learning & Practice)",
     company_name: "Self Learning",
-    icon: tesla,
     iconBg: "#3A3F6B",
     date: "2025(August) - Present",
     points: [
@@ -161,7 +151,6 @@ const experiences = [
   {
     title: "DSA Learner (C++)",
     company_name: "Problem Solving",
-    icon: starbucks,
     iconBg: "#383E56",
     date: "2026 - Present",
     points: [
@@ -172,42 +161,15 @@ const experiences = [
     ],
   },
 ];
-
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
-
+ 
 const projects = [
   {
     name: "E-Commerce Website",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Built a full-stack e-commerce platform with user authentication, product management, and REST APIs. Ensured responsive design and secure data handling.",
     tags: [
       {
-        name: "react",
+        name: "node.js",
         color: "blue-text-gradient",
       },
       {
@@ -225,18 +187,18 @@ const projects = [
   {
     name: "SIH_UI",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Developed a responsive React UI for a Smart India Hackathon project with reusable components and clean user flow. Focused on scalability and usability.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "tailwindcss",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "SIH",
         color: "pink-text-gradient",
       },
     ],
@@ -246,18 +208,18 @@ const projects = [
   {
     name: "BAR-BQ",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Created a BBQ website clone with smooth GSAP animations and interactive UI elements. Emphasized responsiveness and modern visual effects.",
     tags: [
       {
-        name: "nextjs",
+        name: "Tailwindcss",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "GSAP",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Responsive",
         color: "pink-text-gradient",
       },
     ],
@@ -266,4 +228,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };

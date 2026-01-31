@@ -1,7 +1,5 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
-
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
@@ -61,8 +59,15 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-[#100D25] p-8 rounded-2xl'
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
+        <div className="flex justify-between items-center"> 
+          <p className={styles.sectionSubText}>Get in touch</p>
+          <a href="/resume/Hitesh_Bidawatka_Resume.pdf" target="_blank" rel="noopener noreferrer" className="p-2 bg-[#915EFF] font-bold text-white rounded-xl">
+            Download Resume
+          </a>
+        </div>
+
         <h3 className={styles.sectionHeadText}>Contact.</h3>
+
 
         <form
           ref={formRef}
