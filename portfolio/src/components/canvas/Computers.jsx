@@ -59,6 +59,7 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
+    <div className="absolute inset-0 pointer-events-none z-0"> 
     <Canvas
       frameloop='always'
       shadows
@@ -82,6 +83,7 @@ const ComputersCanvas = () => {
 
       <Preload all />
     </Canvas>
+    </div>
   );
 };
 

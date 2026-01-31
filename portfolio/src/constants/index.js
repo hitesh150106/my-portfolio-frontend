@@ -23,7 +23,11 @@ import {
   jobit,
   tripguide,
   threejs,
+  sih,
+  barbq,
+  ecommerce,
 } from "../assets";
+
 
 export const navLinks = [
   {
@@ -198,7 +202,7 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "E-Commerce Website",
     description:
       "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
     tags: [
@@ -215,11 +219,11 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: ecommerce,
+    source_code_link: "https://balajinamkeen-and-his-her-bakestory.onrender.com",
   },
   {
-    name: "Job IT",
+    name: "SIH_UI",
     description:
       "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
     tags: [
@@ -236,11 +240,11 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: sih,
+    source_code_link: "https://sih-ui-react.onrender.com",
   },
   {
-    name: "Trip Guide",
+    name: "BAR-BQ",
     description:
       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
@@ -257,8 +261,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: barbq,
+    source_code_link: "https://react-fe-basic-01.onrender.com",
   },
 ];
 

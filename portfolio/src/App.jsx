@@ -1,14 +1,9 @@
 import { useEffect } from "react";
 import axios from "axios";
 import { BrowserRouter } from 'react-router-dom';
-import {About , Contact , Experience , Feedbacks , Hero , Navbar , Tech , Works , StarsCanvas} from './components';
+import {About , Contact , Experience , Hero , Navbar , Tech , Works , StarsCanvas} from './components';
 
 function App() {
-  useEffect(() => {
-    axios.get("http://localhost:5000/api/test")
-      .then(res => console.log(res.data))
-      .catch(err => console.error(err));
-  }, []);
 
   return (
     <BrowserRouter>
@@ -21,7 +16,6 @@ function App() {
         <Experience />
         <Tech />
         <Works />
-        <Feedbacks />
         <div className='relative z-0'>
           <Contact />
           <StarsCanvas />
