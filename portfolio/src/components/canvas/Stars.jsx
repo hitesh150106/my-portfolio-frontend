@@ -1,6 +1,6 @@
 import React, { useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial } from "@react-three/drei";
+import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random";
 
 const Stars = () => {
@@ -38,6 +38,7 @@ const StarsCanvas = () => {
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
           <Stars />
+           <Preload all />
         </Suspense>
       </Canvas>
     </div>
