@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF, Html } from "@react-three/drei";
+import { OrbitControls, useGLTF, Html } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
@@ -71,8 +71,6 @@ const ComputersCanvas = () => {
           />
           <Computers isMobile={isMobile} />
         </Suspense>
-
-        <Preload all />
       </Canvas>
     </div>
   );

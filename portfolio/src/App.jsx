@@ -6,7 +6,12 @@ import {About , Contact , Experience , Hero , Navbar , Tech , Works , StarsCanva
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter
+        future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true
+      }}
+    >
       <div className='relative z-0 bg-primary bg-[#050816]'>
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
           <Navbar />
