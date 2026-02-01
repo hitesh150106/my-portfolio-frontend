@@ -22,40 +22,40 @@ const Contact = () => {
     setForm({...form,[name]: value,});
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      setLoading(true);
 
-    try {
+      try {
         const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
-        fetch(`${BACKEND_URL}/api/contact`, {
+        const res = await fetch(`${BACKEND_URL}/api/contact`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            name,
-            email,
-            message,
+            name: form.name,
+            email: form.email,
+            message: form.message,
           }),
         });
 
-      const data = await res.json();
+        const data = await res.json();
 
-      if (data.success) {
-        alert("Message sent successfully 🚀");
-        setForm({ name: "", email: "", message: "" });
-      } else {
-        alert("Something went wrong ❌");
+        if (data.success) {
+          alert("Message sent successfully 🚀");
+          setForm({ name: "", email: "", message: "" });
+        } else {
+          alert("Something went wrong ❌");
+        }
+      } catch (error) {
+        console.error(error);
+        alert("Server error ❌");
+      } finally {
+        setLoading(false);
       }
-    } catch (error) {
-      console.error(error);
-      alert("Server error ❌");
-    } finally {
-      setLoading(false);
-    }
-  };
+    };
   
   return (
     <div
