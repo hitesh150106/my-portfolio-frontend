@@ -40,7 +40,6 @@ const Contact = () => {
             message: form.message,
           }),
         });
-
         console.log("DEPLOY TEST v2");
 
         const data = await res.json();
