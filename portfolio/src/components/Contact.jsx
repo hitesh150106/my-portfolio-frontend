@@ -41,6 +41,8 @@ const Contact = () => {
           }),
         });
 
+        console.log("DEPLOY TEST v2");
+
         const data = await res.json();
 
         if (data.success) {
