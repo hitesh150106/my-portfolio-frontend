@@ -40,7 +40,15 @@ const Ball = ({ imgUrl }) => {
 
 const BallCanvas = ({ icon }) => {
   return (
-    <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
+    // <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
+    <Canvas 
+      frameloop="demand"                           // ← CHANGE: demand (not always)
+      gl={{ 
+        preserveDrawingBuffer: true,
+        powerPreference: "low-power"               // ← ADD
+      }}
+    >
+
       <Suspense fallback={<Html center><CanvasLoader /></Html>}>
         <OrbitControls enableZoom={false} enablePan={false} />
         <Ball imgUrl={icon} />

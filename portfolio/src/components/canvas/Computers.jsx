@@ -15,13 +15,26 @@ const Computers = ({ isMobile }) => {
         position={isMobile ? [-1.5, 2, 1] : [-3, 5, 1]}
         angle={0.9}
         penumbra={1}
+        intensity={isMobile ? 2 : 8}              // ← CHANGE: lower intensity mobile
+        castShadow={!isMobile}                    // ← CHANGE: disable shadows mobile
+        shadow-mapSize={isMobile ? [512, 512] : [1024, 1024]}  // ← CHANGE: smaller shadows
+        shadow-bias={-0.0001}
+        shadow-normalBias={0.01}
+        decay={false}
+      />
+
+
+      {/* <spotLight
+        position={isMobile ? [-1.5, 2, 1] : [-3, 5, 1]}
+        angle={0.9}
+        penumbra={1}
         intensity={8}
         castShadow
         shadow-mapSize={[1024, 1024]}
         shadow-bias={-0.0001}
         shadow-normalBias={0.01}
         decay={false}
-      />
+      /> */}
 
       <primitive
         object={computer.scene}
@@ -46,23 +59,20 @@ const ComputersCanvas = () => {
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
-  return (
+    return (
     <div className="absolute inset-0 z-0">
       <Canvas
-        frameloop="always"
-        shadows
-        dpr={[1, 2]}
+        frameloop={isMobile ? "demand" : "always"}  // ← CHANGE: demand on mobile
+        shadows={!isMobile}                        // ← CHANGE: disable shadows mobile
+        dpr={isMobile ? [1, 1.5] : [1, 2]}        // ← CHANGE: lower DPR mobile
         camera={{ position: [20, 3, 5], fov: 25 }}
-        gl={{ preserveDrawingBuffer: true }}
+        gl={{ 
+          preserveDrawingBuffer: true,
+          powerPreference: "low-power"             // ← ADD: mobile GPU optimization
+        }}
         eventPrefix="client"
       >
-        <Suspense
-          fallback={
-            <Html center>
-              <CanvasLoader />
-            </Html>
-          }
-        >
+        <Suspense fallback={<Html center><CanvasLoader /></Html>}>
           <OrbitControls
             enableZoom={false}
             enablePan={false}
@@ -70,11 +80,42 @@ const ComputersCanvas = () => {
             minPolarAngle={Math.PI / 2}
           />
           <Computers isMobile={isMobile} />
-          <Preload all />
+          {/* Remove <Preload all /> - already fixed */}
         </Suspense>
       </Canvas>
     </div>
   );
+
+
+  // return (
+  //   <div className="absolute inset-0 z-0">
+  //     <Canvas
+  //       frameloop="always"
+  //       shadows
+  //       dpr={[1, 2]}
+  //       camera={{ position: [20, 3, 5], fov: 25 }}
+  //       gl={{ preserveDrawingBuffer: true }}
+  //       eventPrefix="client"
+  //     >
+  //       <Suspense
+  //         fallback={
+  //           <Html center>
+  //             <CanvasLoader />
+  //           </Html>
+  //         }
+  //       >
+  //         <OrbitControls
+  //           enableZoom={false}
+  //           enablePan={false}
+  //           maxPolarAngle={Math.PI / 2}
+  //           minPolarAngle={Math.PI / 2}
+  //         />
+  //         <Computers isMobile={isMobile} />
+  //         <Preload all />
+  //       </Suspense>
+  //     </Canvas>
+  //   </div>
+  // );
 };
 
 export default ComputersCanvas;
