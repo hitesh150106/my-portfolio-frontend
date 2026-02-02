@@ -4,8 +4,7 @@ import { OrbitControls, Preload, useGLTF, Html } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  // Use absolute path to ensure mobile browsers find the file 
-  const computer = useGLTF("/desktop_pc/computer.glb");
+  const computer = useGLTF("./compp.glb");
 
   return (
     <mesh>
