@@ -10,7 +10,7 @@ const Hero = () => {
       <img 
         src={herobg} 
         alt="hero-background" 
-        className="absolute inset-0 w-full h-full object-cover z-[-1]" 
+        className="absolute inset-0 w-full h-full object-cover z-0" 
       />
       
       <div className={`relative z-10 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}>
