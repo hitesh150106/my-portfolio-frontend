@@ -1,15 +1,19 @@
- import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import { herobg } from "../assets";
 
 const Hero = () => {
   return (
-  <section className="relative w-full min-h-[100svh] mx-auto overflow-hidden">
+    <section className="relative w-full min-h-[100svh] mx-auto overflow-hidden">
+      {/* Background Image [cite: 26] */}
+      <img 
+        src={herobg} 
+        alt="hero-background" 
+        className="absolute inset-0 w-full h-full object-cover z-[-1]" 
+      />
       
-      <div
-        className={`relative z-10 top-[120px] max-w-7xl mx-auto ${styles.paddingX}
-        flex flex-row items-start gap-5`}
-      >
+      <div className={`relative z-10 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}>
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
@@ -25,12 +29,12 @@ const Hero = () => {
             Idea to Real World Product.
           </p>
 
+          {/* Resume Download [cite: 1, 21] */}
           <a
             href="/resume/Hitesh_Bidawatka_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-6 px-6 py-3 bg-[#915EFF] font-bold
-                       text-white rounded-xl hover:scale-105 transition"
+            className="inline-block mt-6 px-6 py-3 bg-[#915EFF] font-bold text-white rounded-xl hover:scale-105 transition"
           >
             Download Resume
           </a>
@@ -39,6 +43,7 @@ const Hero = () => {
 
       <ComputersCanvas />
 
+      {/* Scroll Indicator */}
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-20">
         <a href="#about">
           <div className="w-[34px] h-[64px] rounded-3xl border-4 border-gray-400 flex justify-center items-start p-3">
