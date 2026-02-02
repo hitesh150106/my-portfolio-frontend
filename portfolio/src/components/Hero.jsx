@@ -4,7 +4,7 @@ import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto overflow-hidden">
+  <section className="relative w-full min-h-[100svh] mx-auto overflow-hidden">
       
       <div
         className={`relative z-10 top-[120px] max-w-7xl mx-auto ${styles.paddingX}
