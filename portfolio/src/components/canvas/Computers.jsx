@@ -8,23 +8,19 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
-<ambientLight intensity={0.6} />
-<directionalLight position={[5, 5, 5]} intensity={1} />
-      <directionalLight 
-        position={[5, 5, 5]} 
-        intensity={isMobile ? 0.8 : 2} 
-      />
+      <ambientLight intensity={0.6} />
+      <directionalLight position={[5, 5, 5]} intensity={1} />
       <spotLight
         position={isMobile ? [-1.5, 2, 1] : [-3, 5, 1]}
         angle={0.9}
         penumbra={1}
-        intensity={isMobile ? 2 : 8}
-        castShadow={!isMobile} 
+        intensity={isMobile ? 2 : 6}
       />
+
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.4 : 0.75}
-        position={isMobile ? [0, -1.8, 0] : [0, -3, -1.5]}
+        position={isMobile ? [0, -1.6, 0] : [0, -3, -1.5]}
       />
     </mesh>
   );
@@ -32,12 +28,10 @@ const Computers = ({ isMobile }) => {
 
 useGLTF.preload("/theone.glb");
 
-
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Robust mobile detection using media query
     const mediaQuery = window.matchMedia("(max-width: 500px)");
     setIsMobile(mediaQuery.matches);
 
@@ -50,15 +44,17 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 z-0 w-full h-full">
+    <div className="absolute inset-0 z-5 w-full h-full">
     <Canvas
-      frameloop="demand"
       dpr={[1, 1.5]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{
+        position: isMobile ? [6, 2, 5] : [20, 3, 5],
+        fov: isMobile ? 35 : 25,
+      }}
       gl={{
         antialias: false,
         powerPreference: "low-power",
-        preserveDrawingBuffer: false,
+        preserveDrawingBuffer: true,
       }}
     >
 
