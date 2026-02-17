@@ -4,11 +4,9 @@ import {
   creator,
   web,
   javascript,
-  typescript,
   html,
   css,
   reactjs,
-  redux,
   tailwind,
   nodejs,
   mongodb,
@@ -19,6 +17,7 @@ import {
   sih,
   barbq,
   ecommerce,
+  pc
 } from "../assets";
 
 
@@ -35,6 +34,10 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
+  // {
+  //   id : "resume",
+  //   title : "Resume"
+  // }
 ];
 
 const services = [
@@ -69,17 +72,9 @@ const technologies = [
     name: "JavaScript",
     icon: javascript,
   },
-  // {
-  //   name: "TypeScript",
-  //   icon: typescript,
-  // },
   {
     name: "React JS",
     icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
   },
   {
     name: "Tailwind CSS",
@@ -105,10 +100,10 @@ const technologies = [
     name: "figma",
     icon: figma,
   },
-  // {
-  //   name: "docker",
-  //   icon: docker,
-  // },
+  {
+    name: "docker",
+    icon: docker,
+  },
 ];
 
 const experiences = [

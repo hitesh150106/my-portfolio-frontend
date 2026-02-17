@@ -1,13 +1,6 @@
-import React, { Suspense } from 'react';
+import React, { Suspense , useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-import {
-  Decal,
-  Float,
-  OrbitControls,
-  Preload,
-  useTexture,
-  Html,
-} from '@react-three/drei';
+import { Decal , Float , OrbitControls , Preload , useTexture , Html} from '@react-three/drei';
 
 import CanvasLoader from '../Loader';
 
@@ -39,13 +32,20 @@ const Ball = ({ imgUrl }) => {
 };
 
 const BallCanvas = ({ icon }) => {
+  const [isMobile] = useState(window.innerWidth <= 500);
+
   return (
-    // <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
+    <div className="w-full h-full">
+      {isMobile ? (
+        <div className="w-24 h-24 bg-gradient-to-br from-white to-[#B2AFA7] rounded-2xl flex items-center justify-center mx-auto">
+          <img src={icon} alt="icon" className="w-12 h-12 object-contain" />
+        </div>
+      ) : (
     <Canvas 
-      frameloop="demand"                           // ← CHANGE: demand (not always)
+      frameloop="always"                      
       gl={{ 
         preserveDrawingBuffer: true,
-        powerPreference: "low-power"               // ← ADD
+        powerPreference: "low-power"       
       }}
     >
 
@@ -55,6 +55,8 @@ const BallCanvas = ({ icon }) => {
          <Preload all />
       </Suspense>
     </Canvas>
+      )}
+    </div>
   );
 };
 

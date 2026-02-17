@@ -6,6 +6,8 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import herobg from "./herobg.png"
+import pc from "./pc.webp"
+import mobile_pc from "./mobile_pc.png"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -49,5 +51,7 @@ export {
   threejs,
   sih,
   barbq,
-  ecommerce
+  ecommerce,
+  pc,
+  mobile_pc
 };

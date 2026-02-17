@@ -68,7 +68,7 @@ const Contact = () => {
       >
         <div className="flex justify-between items-center"> 
           <p className={styles.sectionSubText}>Get in touch</p>
-          <a href="/resume/Hitesh_Bidawatka_Resume.pdf" target="_blank" rel="noopener noreferrer" className="p-2 bg-[#915EFF] font-bold text-white rounded-xl">
+          <a href="/resume/Hitesh_Bidawatka_Resume.pdf" download="HiteshBidwawatkaResume" target="_blank" rel="noopener noreferrer" className="p-2 bg-[#915EFF] font-bold text-white rounded-xl">
             Download Resume
           </a>
         </div>

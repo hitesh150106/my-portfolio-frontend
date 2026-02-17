@@ -41,11 +41,11 @@ const Navbar = () => {
         </div>
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             Hitesh &nbsp;
-            <span className='sm:block hidden'> | Bidawatka</span>
+            <span className='lg:block hidden'> | Bidawatka</span>
           </p>
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className='list-none hidden sm:flex flex-row gap-10 items-center'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -57,13 +57,23 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          <li className="ml-auto">
+            <a 
+              href="/resume/Hitesh_Bidawatka_Resume.pdf" download="HiteshBidawatkaResume" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 bg-[#915EFF] font-bold text-white rounded-xl hover:scale-105 transition-all duration-200 whitespace-nowrap"
+            >
+              Download Resume
+            </a>
+          </li>
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img
             src={toggle ? close : menu}
             alt='menu'
-            className='w-[28px] h-[28px] object-contain'
+            className='w-[28px] h-[28px] object-contain cursor-pointer'
             onClick={() => setToggle(!toggle)}
           />
 
@@ -72,24 +82,35 @@ const Navbar = () => {
               !toggle ? "hidden" : "flex"
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
-            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
+            <ul className='list-none flex flex-col gap-4'>
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                  className={`${
                     active === nav.title ? "text-white" : "text-secondary"
-                  }`}
+                  } hover:text-white text-[16px] font-medium cursor-pointer`}
                   onClick={() => {
-                    setToggle(!toggle);
                     setActive(nav.title);
+                    setToggle(false);
                   }}
                 >
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+
+              <li>
+                <a 
+                  href="/resume/Hitesh_Bidawatka_Resume.pdf"
+                  download
+                  className="block text-center p-3 bg-[#915EFF] font-bold text-white rounded-xl hover:scale-105 transition-all duration-200"
+                >
+                  Download Resume
+                </a>
+              </li>
             </ul>
           </div>
         </div>
+
       </div>
     </nav>
   );
