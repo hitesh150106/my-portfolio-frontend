@@ -37,7 +37,7 @@ const BallCanvas = ({ icon }) => {
   return (
     <div className="w-full h-full">
       {isMobile ? (
-        <div className="w-24 h-24 bg-gradient-to-br from-white to-[#B2AFA7] rounded-2xl flex items-center justify-center mx-auto">
+        <div className="w-24 h-24 bg-gradient-to-br from-[#B2AFA7] to-[#484540] rounded-2xl flex items-center justify-center mx-auto">
           <img src={icon} alt="icon" className="w-12 h-12 object-contain" />
         </div>
       ) : (
