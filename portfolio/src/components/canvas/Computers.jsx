@@ -25,8 +25,6 @@ const Computers = ({ isMobile }) => {
   );
 };
 
-useGLTF.preload("/compp.glb");
-
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -45,19 +43,11 @@ const ComputersCanvas = () => {
   return (
     <div className="absolute inset-0 z-5 w-full h-full">
       {isMobile ? (
-        // <div className="w-full h-full flex items-center justify-center">
-        //   <img 
-        //     src={mobile_pc}
-        //     alt="d" 
-        //     className="max-w-[80%] max-h-[80%] object-contain"
-        //   />
-        // </div>
-
         <div className="w-full h-full flex items-center justify-center">
           <img 
             src={mobile_pc}
             alt="developer-setup" 
-            className="w-[80%] h-[80%] mt-40 object-contain scale-195 md:scale-170" // Increases size by 25-50%
+            className="w-[80%] h-[80%] mt-40 object-contain scale-195 md:scale-170" 
           />
         </div>
       ) : (
