@@ -17,6 +17,7 @@ import {
   sih,
   barbq,
   ecommerce,
+  attendFlow,
   pc
 } from "../assets";
 
@@ -158,6 +159,27 @@ const experiences = [
 ];
  
 const projects = [
+  {
+    name: "AttendFlow",
+    description:
+      "AttendFlow is a complete College ERP & Attendance Management System designed to simplify academic management with role-based access and modern workflow automation.",
+    tags: [
+      {
+        name: "node.js & Express.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "react",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: attendFlow,
+    source_code_link: "https://studentattendance-system.vercel.app",
+  },  
   {
     name: "E-Commerce Website",
     description:

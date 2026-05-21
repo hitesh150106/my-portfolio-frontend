@@ -26,6 +26,7 @@ import threejs from "./tech/threejs.svg";
 import sih from "./sih.png";
 import barbq from "./barbq.png";
 import ecommerce from "./ecommerce.png";
+import attendFlow from "./attendFlow.png";
 
 export {
   herobg,
@@ -52,6 +53,7 @@ export {
   sih,
   barbq,
   ecommerce,
+  attendFlow,
   pc,
   mobile_pc
 };
