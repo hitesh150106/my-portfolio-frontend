@@ -100,7 +100,7 @@ const Navbar = () => {
 
               <li>
                 <a 
-                  href="/resume/Hitesh_Bidawatka_Resume.pdf"
+                  href="/resume/Resume_hitesh.pdf"
                   download
                   className="block text-center p-3 bg-[#915EFF] font-bold text-white rounded-xl hover:scale-105 transition-all duration-200"
                 >
