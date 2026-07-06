@@ -59,7 +59,7 @@ const Navbar = () => {
           ))}
           <li className="ml-auto">
             <a 
-              href="/resume/Hitesh_Bidawatka_Resume.pdf" download="HiteshBidawatkaResume" 
+              href="/resume/Resume_hitesh.pdf" download="HiteshBidawatkaResume" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 bg-[#915EFF] font-bold text-white rounded-xl hover:scale-105 transition-all duration-200 whitespace-nowrap"
@@ -100,7 +100,7 @@ const Navbar = () => {
 
               <li>
                 <a 
-                  href="/resume/Resume_hitesh.pdf"
+                  href="/resume/Resume_hitesh/pdf"
                   download
                   className="block text-center p-3 bg-[#915EFF] font-bold text-white rounded-xl hover:scale-105 transition-all duration-200"
                 >
